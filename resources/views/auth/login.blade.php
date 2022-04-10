@@ -1,84 +1,143 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-body"
-                style="
-                    font-family: Monsterrat;
-                    font-style: normal;
-                    font-weight: 800;
-                    font-size: 32px;
-                    line-height: 39px;
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-                    text-align:center;
-                    align-items: center;
-                    color: #55B2BE"
-                >
-                    {{ __('MASUK') }}
+    <title>{{ config('app.name', 'SIMBA') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body style="background: linear-gradient(116.82deg, #5594BE 0%, #65DDC7 100%);position: relative; height: 955px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div>
+                    <p style="
+                    font-family: 'Montserrat';
+                    font-size: 700%;
+
+                    display: flex;
+                    letter-spacing: 0.57em;
+
+                    color: rgba(255, 255, 255, 0.67);
+                    margin-left : 12%;
+                    margin-bottom :-5%;
+                    margin-top:15%
+                    ">
+                        SIMBA
+                    </p>
+                    <p style="
+                    font-family: 'Montserrat';
+                    font-size: 350%;
+
+                    display: flex;
+                    letter-spacing: 0.455em;
+                    margin-left : 3%;
+
+                    color: rgba(255, 255, 255, 0.67);">
+                        Informasi Lomba
+                    </p>
                 </div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                <div class="card" style="
+                    background: #FFFFFF;
+                    border: 1px solid #000000;
+                    box-sizing: border-box;
+                    box-shadow: 3px 4px 22px rgba(0, 0, 0, 0.17);
+                    border-radius: 13px;
+                ">
+                    <div class="card-body"
+                    style="
+                        font-family: Monsterrat;
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 32px;
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
+                        text-align:center;
+                        align-items: center;
+                        color: #55B2BE"
+                    >
+                        MASUK
+                    </div>
 
-                            <div class="col-md-6" style="margin-left:22%">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                            <div class="form-group row" style="margin-left:5%">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right" style="margin-left: 5%">{{ __('Password') }}</label>
+                                <div class="col-md-6" style="margin-left:22%">
+                                    <input style="" id="email" type="email" placeholder="Masukkan email.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                            <div class="col-md-6" style="margin-left:22%">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-
-                                <div style="text-align: right">
-                                    @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}" style="text-align: right">
-                                        {{ __('Lupa kata sandi??') }}
-                                    </a>
-                                    @endif
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
-                        </div>
-                        <div style="text-align: center">
 
-                        <div class="form-group mb-0">
-                            <div class="col-md-8 offset-md-2">
-                                <button type="submit" class="btn btn-primary" style="background: linear-gradient(90.54deg, #5594BE 1.53%, #65DDC7 100%);border: 1px solid #000000 box-shadow: 0px 4px 4px 0px #00000040;box-shadow: 0px 4px 4px 0px #00000040;">
-                                    {{ __('Masuk') }}
-                                </button>
+                            <div class="form-group row" style="margin-left:5%">
+                                <label for="password" class="col-md-4 col-form-label text-md-right" style="margin-left: 5%">{{ __('Password') }}</label>
+
+                                <div class="col-md-6" style="margin-left:22%">
+                                    <input id="password" type="password" placeholder="Masukkan kata.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+
+                                    <div style="text-align: right">
+                                        @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}" style="text-align: right">
+                                            {{ __('Lupa kata sandi??') }}
+                                        </a>
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div style="text-align: center">
 
-                        <div>
-                            <p style="">Belum punya akun?</p>
-                            <a class="btn btn-link" href="{{ route('register') }}" style="padding: -20%">
-                                {{ __('Daftar di sini') }}
-                            </a>
-                        </div>
-                    </form>
+                                <div class="form-group mb-0">
+                                    <div class="col-md-8 offset-md-2">
+                                        <button type="submit" class="btn btn-primary" style="
+                                            background: linear-gradient(90.54deg, #5594BE 1.53%, #65DDC7 100%);
+                                            border: 1px solid #000000 box-shadow: 0px 4px 4px 0px #00000040;
+                                            box-shadow: 0px 4px 4px 0px #00000040;
+                                            width: 65%;
+                                            ">
+                                            {{ __('Masuk') }}
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p style="margin-top:5%">Belum punya akun?</p>
+                                    <a class="btn btn-link" href="{{ route('register') }}" style="margin-top:-5%">
+                                        {{ __('Daftar di sini') }}
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-@endsection
+</body>
+</html>

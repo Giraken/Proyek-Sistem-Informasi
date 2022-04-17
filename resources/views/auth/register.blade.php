@@ -18,48 +18,72 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body style="background: linear-gradient(116.82deg, #5594BE 0%, #65DDC7 100%);">
+<body style="background: linear-gradient(116.82deg, #5594BE 0%, #65DDC7 100%);height: 955px;">
     <div class="container">
-        <div>
-            <p style="
-            font-family: 'Montserrat';
-            font-size: 700%;
-
-            display: flex;
-            letter-spacing: 0.57em;
-
-            color: rgba(255, 255, 255, 0.67);
-            margin-left : 12%;
-            ">
-                SIMBA
-            </p>
-            <p style="
-            font-family: 'Montserrat';
-            font-size: 36px;
-
-            display: flex;
-            letter-spacing: 0.455em;
-            margin-left : 15%;
-
-            color: rgba(255, 255, 255, 0.67);">
-                Informasi Lomba
-            </p>
-        </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Register') }}</div>
+                <div>
+                    <p style="
+                    font-family: 'Montserrat';
+                    font-size: 700%;
+
+                    display: flex;
+                    letter-spacing: 0.57em;
+
+                    color: rgba(255, 255, 255, 0.67);
+                    margin-left : 12%;
+                    margin-bottom :-5%;
+                    margin-top:15%
+                    ">
+                        SIMBA
+                    </p>
+                    <p style="
+                    font-family: 'Montserrat';
+                    font-size: 350%;
+
+                    display: flex;
+                    letter-spacing: 0.455em;
+                    margin-left : 3%;
+
+                    color: rgba(255, 255, 255, 0.67);">
+                        Informasi Lomba
+                    </p>
+                </div>
+                <div class="card" style="
+                    background: #FFFFFF;
+                    border: 1px solid #000000;
+                    box-sizing: border-box;
+                    box-shadow: 3px 4px 22px rgba(0, 0, 0, 0.17);
+                    border-radius: 13px;
+                ">
+                    <div class="card-body"
+                    style="
+                        font-family: Monsterrat;
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 32px;
+
+                        text-align:center;
+                        align-items: center;
+                        color: #55B2BE"
+                    >
+                        Daftar
+                    </div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Nama Lengkap</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" placeholder="Masukkan nama pengguna.." class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -70,10 +94,10 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Kelas/Semester</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="email" type="email" placeholder="Masukkan kelas/semester.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -84,10 +108,24 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                    <input id="email" type="email" placeholder="Masukkan email.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Kata Sandi</label>
+
+                                <div class="col-md-6">
+                                    <input id="password" type="password" placeholder="Masukkan kata sandi.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -98,19 +136,49 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Asal Instansi</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password-confirm" type="password" placeholder="Masukkan asal instansi.." class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Register') }}
-                                    </button>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Konfirmasi Kata Sandi</label>
+
+                                <div class="col-md-6">
+                                    <input id="password" type="password" placeholder="Masukkan ulang kata sandi.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
+                            </div>
+
+                            <div style="text-align: center">
+
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-8 offset-md-2">
+                                        <button type="submit" class="btn btn-primary" style="
+                                            background: linear-gradient(90.54deg, #5594BE 1.53%, #65DDC7 100%);
+                                            border: 1px solid #000000 box-shadow: 0px 4px 4px 0px #00000040;
+                                            box-shadow: 0px 4px 4px 0px #00000040;
+                                            width: 65%;
+                                        ">
+                                            {{ __('Register') }}
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p style="margin-top:5%">Sudah punya akun?</p>
+                                    <a class="btn btn-link" href="{{ route('login') }}" style="margin-top:-5%">
+                                        {{ __('Masuk') }}
+                                    </a>
+                                </div>
+
                             </div>
                         </form>
                     </div>

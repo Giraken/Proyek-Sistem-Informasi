@@ -18,6 +18,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body style="background: linear-gradient(116.82deg, #5594BE 0%, #65DDC7 100%);position: relative; height: 955px;">
     <div class="container">
@@ -69,7 +73,7 @@
                         align-items: center;
                         color: #55B2BE"
                     >
-                        MASUK
+                        Masuk
                     </div>
 
                     <div class="card-body">
@@ -120,7 +124,7 @@
                                             border: 1px solid #000000 box-shadow: 0px 4px 4px 0px #00000040;
                                             box-shadow: 0px 4px 4px 0px #00000040;
                                             width: 65%;
-                                            ">
+                                        ">
                                             {{ __('Masuk') }}
                                         </button>
                                     </div>

@@ -27,9 +27,9 @@ Route::get('/dashboard', function() {
 Route::get('/detail_lomba', function() {
     return view('detail');
 });
-Route::get('/kategori', function() {
-    return view('kategori');
+Route::get('/profil', function() {
+    return view('profil');
 });
-Route::get('/tim', function() {
-    return view('cari');
+Route::get('/cari_tim', function() {
+    return view('cari_tim');
 });

@@ -24,6 +24,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboard', function() {
     return view('dashboard');
 });
+Route::get('/detail_lomba', function() {
+    return view('detail');
+});
 Route::get('/kategori', function() {
     return view('kategori');
 });

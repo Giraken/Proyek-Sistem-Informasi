@@ -36,7 +36,7 @@
                     letter-spacing: 0.57em;
 
                     color: rgba(255, 255, 255, 0.67);
-                    margin-left : 12%;
+                    margin-left : 15%;
                     margin-bottom :-5%;
                     margin-top:15%
                     ">
@@ -48,7 +48,7 @@
 
                     display: flex;
                     letter-spacing: 0.455em;
-                    margin-left : 3%;
+                    margin-left : 7%;
 
                     color: rgba(255, 255, 255, 0.67);">
                         Informasi Lomba
@@ -76,14 +76,14 @@
                         Masuk
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body" style="">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
-                            <div class="form-group row" style="margin-left:5%">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
+                            <div class="form-group">
+                                <label for="email" class="text-md-right" style="margin-left: 30%">Email</label>
 
-                                <div class="col-md-6" style="margin-left:22%">
+                                <div class="col-md-6" style="margin-left: 28%">
                                     <input style="" id="email" type="email" placeholder="Masukkan email.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                     @error('email')
@@ -94,10 +94,10 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row" style="margin-left:5%">
-                                <label for="password" class="col-md-4 col-form-label text-md-right" style="margin-left: 5%">{{ __('Password') }}</label>
+                            <div class="form-group">
+                                <label for="password" class="text-md-right" style="margin-left: 30%">Password</label>
 
-                                <div class="col-md-6" style="margin-left:22%">
+                                <div class="col-md-6" style="margin-left: 28%">
                                     <input id="password" type="password" placeholder="Masukkan kata.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                     @error('password')
@@ -118,14 +118,14 @@
                             <div style="text-align: center">
 
                                 <div class="form-group mb-0">
-                                    <div class="col-md-8 offset-md-2">
+                                    <div class="col-md-8" style="margin-left: 19%;">
                                         <button type="submit" class="btn btn-primary" style="
                                             background: linear-gradient(90.54deg, #5594BE 1.53%, #65DDC7 100%);
                                             border: 1px solid #000000 box-shadow: 0px 4px 4px 0px #00000040;
                                             box-shadow: 0px 4px 4px 0px #00000040;
-                                            width: 65%;
+                                            width: 65%; border-radius:30px
                                         ">
-                                            {{ __('Masuk') }}
+                                            Masuk
                                         </button>
                                     </div>
                                 </div>

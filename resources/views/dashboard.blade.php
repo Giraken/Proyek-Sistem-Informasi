@@ -9,10 +9,10 @@
             <a class="col-4" href="cari_tim">
                 <img src="img/Cari Tim.png" alt="Cari Tim">
             </a>
-            <a class="col-4" href="login">
+            <a class="col-4" href="publikasi">
                 <img src="img/Publikasi.png" alt="Publikasi">
             </a>
-            <a class="col-4" href="login">
+            <a class="col-4" href="#">
                 <img src="img/Kategori.png" alt="Kategori">
             </a>
         </div>
@@ -57,15 +57,4 @@
             </div>
         </div>
     </div>
-    <footer class="d-flex py-3 border-top" style="background-color:#211736">
-        <div class="align-items-center ml-3">
-            <p style="font-family: 'Montserrat'; font-weight: 500; font-size: 24px; display: flex; color: #FFFFFF; ">
-              About Us
-            </p>
-            <p style="font-family: 'Montserrat'; font-weight: 500; font-size: 20px; color: rgba(255, 255, 255, 0.5);">
-                Simba adalah sebuah website sistem informasi yang menampilkan lomba-lomba di <br> seluruh indonesia dan membantu pengguna mencari tim untuk mengikuti lomba
-            </p>
-            <span class="text-muted">Copyright © 2022 SIMBA</span>
-        </div>
-    </footer>
 @endsection

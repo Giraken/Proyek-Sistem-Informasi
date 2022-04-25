@@ -36,7 +36,7 @@
                     letter-spacing: 0.57em;
 
                     color: rgba(255, 255, 255, 0.67);
-                    margin-left : 12%;
+                    margin-left : 15%;
                     margin-bottom :-5%;
                     margin-top:15%
                     ">
@@ -48,7 +48,7 @@
 
                     display: flex;
                     letter-spacing: 0.455em;
-                    margin-left : 3%;
+                    margin-left : 7%;
 
                     color: rgba(255, 255, 255, 0.67);">
                         Informasi Lomba
@@ -80,9 +80,14 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">Nama Lengkap</label>
+                                <label for="name" class="col-md-4 text-md-left" style="margin-left: 5%">Nama Lengkap</label>
 
-                                <div class="col-md-6">
+                                <label for="email" class="col-md-4 text-md-right"  style="margin-left: -5%">Kelas/Semester</label>
+                            </div>
+
+                            <div class="form-group row">
+
+                                <div class="col-md-5" style="margin-left: 5%">
                                     <input id="name" type="text" placeholder="Masukkan nama pengguna.." class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
@@ -91,12 +96,8 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
 
-                            <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">Kelas/Semester</label>
-
-                                <div class="col-md-6">
+                                <div class="col-md-5" style="margin-left: 4%">
                                     <input id="email" type="email" placeholder="Masukkan kelas/semester.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                     @error('email')
@@ -108,10 +109,25 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
+                                <label for="name" class="col-md-4 text-md-left" style="margin-left: 5%">Email</label>
 
-                                <div class="col-md-6">
-                                    <input id="email" type="email" placeholder="Masukkan email.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <label for="email" class="col-md-4 text-md-right"  style="margin-left: -9.5%">Kata Sandi</label>
+                            </div>
+
+                            <div class="form-group row">
+
+                                <div class="col-md-5" style="margin-left: 5%">
+                                    <input id="name" type="text" placeholder="Masukkan email.." class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-5" style="margin-left: 4%">
+                                    <input id="email" type="email" placeholder="Masukkan kata sandi.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -122,34 +138,27 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Kata Sandi</label>
+                                <label for="name" class="col-md-4 text-md-left" style="margin-left: 5%">Asal Instansi</label>
 
-                                <div class="col-md-6">
-                                    <input id="password" type="password" placeholder="Masukkan kata sandi.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <label for="email" class="col-md-4 text-md-right"  style="margin-left: %">Konfirmasi Kata Sandi</label>
+                            </div>
 
-                                    @error('password')
+                            <div class="form-group row">
+
+                                <div class="col-md-5" style="margin-left: 5%">
+                                    <input id="name" type="text" placeholder="Masukkan asal instansi.." class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                    @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
 
-                            <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Asal Instansi</label>
+                                <div class="col-md-5" style="margin-left: 4%">
+                                    <input id="email" type="email" placeholder="Masukkan ulang kata sandi.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="password" placeholder="Masukkan asal instansi.." class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Konfirmasi Kata Sandi</label>
-
-                                <div class="col-md-6">
-                                    <input id="password" type="password" placeholder="Masukkan ulang kata sandi.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                    @error('password')
+                                    @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -165,15 +174,15 @@
                                             background: linear-gradient(90.54deg, #5594BE 1.53%, #65DDC7 100%);
                                             border: 1px solid #000000 box-shadow: 0px 4px 4px 0px #00000040;
                                             box-shadow: 0px 4px 4px 0px #00000040;
-                                            width: 65%;
+                                            width: 65%; margin-top:5%;border-radius:30px
                                         ">
-                                            {{ __('Register') }}
+                                            Kirim
                                         </button>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <p style="margin-top:5%">Sudah punya akun?</p>
+                                    <p style="margin-top:1%">Sudah punya akun?</p>
                                     <a class="btn btn-link" href="{{ route('login') }}" style="margin-top:-5%">
                                         {{ __('Masuk') }}
                                     </a>

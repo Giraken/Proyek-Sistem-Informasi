@@ -23,7 +23,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body style="background-color:rgba(239, 239, 239, 1);
+">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -41,13 +42,13 @@
                             <a class="nav-link" href="dashboard" style="font-size: 250%">{{ __('Beranda') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}" style="font-size: 250%">{{ __('Kategori') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Kategori') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}" style="font-size: 250%">{{ __('Tim') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Tim') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}" style="font-size: 250%">{{ __('Bantuan') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Bantuan') }}</a>
                         </li>
                     </ul>
 
@@ -95,5 +96,16 @@
             @yield('content')
         </main>
     </div>
+    <footer class="d-flex py-3 border-top" style="background-color:#211736">
+        <div class="align-items-center ml-3">
+            <p style="font-family: 'Montserrat'; font-weight: 500; font-size: 24px; display: flex; color: #FFFFFF; ">
+              About Us
+            </p>
+            <p style="font-family: 'Montserrat'; font-weight: 500; font-size: 20px; color: rgba(255, 255, 255, 0.5);">
+                Simba adalah sebuah website sistem informasi yang menampilkan lomba-lomba di <br> seluruh indonesia dan membantu pengguna mencari tim untuk mengikuti lomba
+            </p>
+            <span class="text-muted">Copyright © 2022 SIMBA</span>
+        </div>
+    </footer>
 </body>
 </html>

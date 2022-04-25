@@ -33,3 +33,9 @@ Route::get('/profil', function() {
 Route::get('/cari_tim', function() {
     return view('cari_tim');
 });
+Route::get('/edit_profil', function() {
+    return view('edit_profil');
+});
+Route::get('/publikasi', function() {
+    return view('publikasi');
+});

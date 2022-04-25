@@ -1,30 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="container text-center" style="margin-top:5%;box-shadow: 0 3px 20px rgba(0, 0, 0, .5); border-radius: 10px; background-color: white; padding: 15px; position: relative;">
+    <div class="container" style="margin-bottom: 10%">
+        <div class="container text-center" style="margin-top:2%;box-shadow: 0 3px 20px rgba(0, 0, 0, .5); border-radius: 10px; background-color: white; padding: 15px; position: relative;">
             <div class="Judul">
                 <h1 style="font-family: 'Montserrat';color: #5594BE;">Judul Lomba</h1>
             </div>
             <div class="row" style="margin-top: 3%">
                 <div class="col-5">
-                    <img src="img/3.png" alt="poster">
+                    <img src="img/3.png" alt="poster" style="width: 90%;height:90%">
                 </div>
                 <div class="col-6">
                     <div class="row">
                         <ul class="nav" style="text-align: center;">
-                            <div class="col-3">
-                                <li class="active"><a data-toggle="tab" href="#Deskripsi" style="color:#5594BE;">Deskripsi</a></li>
+                            <div class="col-4">
+                                <li class="active"><a data-toggle="tab" href="#Deskripsi" style="color:#5594BE;font-size:25px">Deskripsi</a></li>
                             </div>
                             <div class="col-2">
-                                <li><a data-toggle="tab" href="#Syarat" style="color:#5594BE;">Syarat</a></li>
+                                <li><a data-toggle="tab" href="#Syarat" style="color:#5594BE;font-size:25px">Syarat</a></li>
                             </div>
                         </ul>
                     </div>
                     <div class="tab-content">
                         <div id="Deskripsi" class="tab-pane active"> <br>
                             <div class="container">
-                                <p  style="text-align: justify; font-family: 'Montserrat';color: #5C5C5C;">
+                                <p  style="text-align: justify; font-family: 'Montserrat';color: #5C5C5C;font-size:20px">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when
                                     looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
                                     of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
@@ -36,10 +36,15 @@
                         </div>
                         <div id="Syarat" class="tab-pane"> <br>
                             <div class="container">
-                                <p style="text-align: justify; font-family: 'Montserrat';color: #5C5C5C;">
+                                <p style="text-align: justify; font-family: 'Montserrat';color: #5C5C5C;font-size:20px">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis eaque consectetur ipsam quas alias exercitationem, hic odit! Beatae sed dolore accusantium modi ut expedita vero molestias suscipit ex consectetur!
                                 </p>
                             </div>
+                        </div>
+                        <div>
+                            <p style="font-size: 20px">
+                                <b>Kategori :</b> Isi   <b>Bidang :</b> Isi     <b>Tingkat :</b> Isi
+                            </p>
                         </div>
                     </div>
                     <div style="margin-left: 90%">

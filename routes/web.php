@@ -39,3 +39,6 @@ Route::get('/edit_profil', function() {
 Route::get('/publikasi', function() {
     return view('publikasi');
 });
+Route::get('/cari_lomba', function() {
+    return view('cari_lomba');
+});

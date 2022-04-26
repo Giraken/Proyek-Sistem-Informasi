@@ -80,9 +80,8 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 text-md-left" style="margin-left: 5%">Nama Lengkap</label>
-
-                                <label for="email" class="col-md-4 text-md-right"  style="margin-left: -5%">Kelas/Semester</label>
+                                <label for="name" class="col-md-4 text-md-left" style="margin-left: 5%">Nama Lengkap<i class="text-danger">*</i></label>
+                                <label for="kelas" class="col-md-4 text-md-right"  style="margin-left: -5%">Kelas/Semester  </label>
                             </div>
 
                             <div class="form-group row">
@@ -98,9 +97,9 @@
                                 </div>
 
                                 <div class="col-md-5" style="margin-left: 4%">
-                                    <input id="email" type="email" placeholder="Masukkan kelas/semester.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="kelas" type="text" placeholder="Masukkan kelas/semester.." class="form-control @error('kelas') is-invalid @enderror" name="kelas" value="{{ old('kelas') }}" required autocomplete="kelas">
 
-                                    @error('email')
+                                    @error('kelas')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -109,17 +108,17 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 text-md-left" style="margin-left: 5%">Email</label>
+                                <label for="email" class="col-md-4 text-md-left" style="margin-left: 5%">Email <i class="text-danger">*</i></label>
 
-                                <label for="email" class="col-md-4 text-md-right"  style="margin-left: -9.5%">Kata Sandi</label>
+                                <label for="password" class="col-md-4 text-md-right"  style="margin-left: -9.5%">Kata Sandi <i class="text-danger">*</i></label>
                             </div>
 
                             <div class="form-group row">
 
                                 <div class="col-md-5" style="margin-left: 5%">
-                                    <input id="name" type="text" placeholder="Masukkan email.." class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="email" type="email" placeholder="Masukkan email.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                    @error('name')
+                                    @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -127,9 +126,9 @@
                                 </div>
 
                                 <div class="col-md-5" style="margin-left: 4%">
-                                    <input id="email" type="email" placeholder="Masukkan kata sandi.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="password" type="password" placeholder="Masukkan kata sandi.." class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password">
 
-                                    @error('email')
+                                    @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -138,17 +137,17 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 text-md-left" style="margin-left: 5%">Asal Instansi</label>
+                                <label for="instansi" class="col-md-4 text-md-left" style="margin-left: 5%">Asal Instansi</label>
 
-                                <label for="email" class="col-md-4 text-md-right"  style="margin-left: %">Konfirmasi Kata Sandi</label>
+                                <label for="password_confirmation" class="col-md-4 text-md-right"  style="margin-left: %">Konfirmasi Kata Sandi <i class="text-danger">*</i></label>
                             </div>
 
                             <div class="form-group row">
 
                                 <div class="col-md-5" style="margin-left: 5%">
-                                    <input id="name" type="text" placeholder="Masukkan asal instansi.." class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="instansi" type="text" placeholder="Masukkan asal instansi.." class="form-control @error('instansi') is-invalid @enderror" name="instansi" value="{{ old('instansi') }}" required autocomplete="instansi" autofocus>
 
-                                    @error('name')
+                                    @error('instansi')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -156,9 +155,9 @@
                                 </div>
 
                                 <div class="col-md-5" style="margin-left: 4%">
-                                    <input id="email" type="email" placeholder="Masukkan ulang kata sandi.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="password_confirmation" type="password" placeholder="Masukkan ulang kata sandi.." class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" value="{{ old('password_confirmation') }}" required autocomplete="password_confirmation">
 
-                                    @error('email')
+                                    @error('password_confirmation')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

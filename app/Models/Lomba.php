@@ -17,5 +17,6 @@ class Lomba extends Model
         "lomba_jenis",
         "lomba_deskripsi",
         "lomba_foto",
+        "views",
     ];
 }

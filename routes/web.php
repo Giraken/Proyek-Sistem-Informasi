@@ -27,6 +27,7 @@ Auth::routes();
 Route::get('/lomba/create',[LombaController::class, 'create'])->name('lomba.create');
 Route::post('/lomba',[LombaController::class, 'store'])->name('lomba.store');
 Route::get('/lomba/search',[LombaController::class, 'search'])->name('lomba.search');
+Route::post('/lomba/search',[LombaController::class, 'filter'])->name('lomba.filter');
 Route::get('/lomba/{lomba}',[LombaController::class, 'show'])->name('lomba.show');
 
 Route::get('/user/{user}/edit',[UserController::class, 'edit'])->name('user.edit');

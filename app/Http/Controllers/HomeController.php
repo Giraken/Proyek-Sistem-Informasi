@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lomba;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $lombas = Lomba::orderBy("views","desc")->limit(3)->get();
+        return view('dashboard')->with('lombas', $lombas);
     }
 }

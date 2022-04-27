@@ -6,13 +6,13 @@
         <img src="img/2.png" alt="SIMBA" style="width: 45%; height:45%">
 
         <div class="row" style="margin-top: 5%">
-            <a class="col-4" href="cari_tim">
+            <a class="col-4" href="#">
                 <img src="img/Cari Tim.png" alt="Cari Tim">
             </a>
-            <a class="col-4" href="publikasi">
+            <a class="col-4" href="{{route('lomba.create')}}">
                 <img src="img/Publikasi.png" alt="Publikasi">
             </a>
-            <a class="col-4" href="#">
+            <a class="col-4" href="{{route('lomba.search')}}">
                 <img src="img/Kategori.png" alt="Kategori">
             </a>
         </div>
@@ -21,21 +21,15 @@
             <img src="img/Terpopuler.png" alt="Terpopuler" style="margin-top:5% ">
         </div>
 
-        <div class="row" style="margin-top: 3%">
-            <div class="col-3">
-                <a href="detail_lomba">
-                    <img src="img/3.png" alt="coba">
+        <div class="row justify-content-center" style="margin-top: 3%">
+            @foreach ($lombas as $lomba)
+            <div class="col-3 mx-3 my-5 bg-white text-center rounded shadow">
+                <a href="{{route('lomba.show',$lomba->id)}}">
+                    <img src="{{asset($lomba->lomba_foto)}}" alt="coba" class="w-100 my-2">
                 </a>
+                <a href="{{route('lomba.show',$lomba->id)}}" class="fw-bold">{{$lomba->lomba_judul}}</a>
             </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
+            @endforeach
         </div>
 
         <div>

@@ -34,6 +34,7 @@ class LombaSeeder extends Seeder
                 "lomba_jenis" => rand(0,1),
                 "lomba_deskripsi" => $faker->realText(120),
                 "lomba_foto" => "images/posters/".rand(1,7).".jpg",
+                "views" => rand(100,150),
             ]);
         }
     }

@@ -26,9 +26,12 @@ Auth::routes();
 //LOMBA ROUTE
 Route::get('/lomba/create',[LombaController::class, 'create'])->name('lomba.create');
 Route::post('/lomba',[LombaController::class, 'store'])->name('lomba.store');
+Route::get('/lomba/search',[LombaController::class, 'search'])->name('lomba.search');
 Route::get('/lomba/{lomba}',[LombaController::class, 'show'])->name('lomba.show');
 
-Route::get('/user/{user}',[UserController::class, 'show'])->name('user.show');
+Route::get('/user/{user}/edit',[UserController::class, 'edit'])->name('user.edit');
+Route::post('/user/{user}',[UserController::class, 'update'])->name('user.update');
+Route::get('/user/',[UserController::class, 'show'])->name('user.show')->middleware('auth');
 
 Route::get('/dashboard', function() {
     return view('dashboard');

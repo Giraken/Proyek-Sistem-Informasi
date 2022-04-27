@@ -15,8 +15,19 @@
                                     border: 1px solid #ccc;
                                     border-radius: 4px;
                                     box-sizing: border-box;
-                                ">
-                                    <option
+                                "><option value=""
+                                    style="
+                                    font-family: 'Montserrat';
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 24px;
+                                    line-height: 29px;
+                                    display: flex;
+                                    align-items: center;
+                                    color: grey;
+                                    "> -- Semua Kategori --
+                                    </option>
+                                    <option value="Olimpiade"
                                     style="
                                     font-family: 'Montserrat';
                                     font-style: normal;
@@ -64,7 +75,18 @@
                                     border: 1px solid #ccc;
                                     border-radius: 4px;
                                     box-sizing: border-box;
-                                ">
+                                "><option value=""
+                                    style="
+                                    font-family: 'Nunito Sans';
+                                    font-style: normal;
+                                    font-weight: 800;
+                                    font-size: 24px;
+                                    line-height: 33px;
+                                    display: flex;
+                                    align-items: center;
+                                    letter-spacing: 0.02em;
+                                    color: grey;
+                                    ">-- Semua Bidang --</option>
                                     <option value="Komputer"
                                     style="
                                     font-family: 'Nunito Sans';
@@ -163,6 +185,18 @@
                                     border-radius: 4px;
                                     box-sizing: border-box;
                                 ">
+                                <option value=""
+                                style="
+                                font-family: 'Nunito Sans';
+                                font-style: normal;
+                                font-weight: 800;
+                                font-size: 24px;
+                                line-height: 33px;
+                                display: flex;
+                                align-items: center;
+                                letter-spacing: 0.02em;
+                                color: grey;"
+                                >-- Semua Tingkat --</option>
                                     <option value="Kuliah"
                                     style="
                                     font-family: 'Nunito Sans';
@@ -228,7 +262,7 @@
 
                             <div class="col-3">
                                 <a href="">
-                                    <img src="img/Filter.svg" alt="Filter"
+                                    <img src="{{asset("img/Filter.svg")}}" alt="Filter"
                                     style="
                                     padding-top: 10px;
                                     padding-left: 90px;
@@ -240,53 +274,15 @@
 
                 </div>
             </div>
-
-
-        <div class="row" style="margin-top: 3%">
-            <div class="col-3">
-                <a href="detail_lomba">
-                    <img src="img/3.png" alt="coba">
-                </a>
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-        </div>
-
-        <div class="row" style="margin-top: 3%">
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-        </div>
-
-        <div class="row" style="margin-top: 3%">
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
+            <div class="row justify-content-center" style="margin-top: 3%">
+                @foreach ($lombas as $lomba)
+                <div class="col-2 mx-3 my-5 bg-white text-center rounded shadow">
+                    <a href="{{route('lomba.show',$lomba->id)}}">
+                        <img src="{{asset($lomba->lomba_foto)}}" alt="coba" class="w-100 my-2">
+                    </a>
+                    <a href="{{route('lomba.show',$lomba->id)}}" class="fw-bold">{{$lomba->lomba_judul}}</a>
+                </div>
+                @endforeach
         </div>
     </div>
 @endsection

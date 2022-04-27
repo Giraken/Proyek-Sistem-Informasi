@@ -48,7 +48,7 @@
                     </h1>
                 </div>
                 <div class="col-2" style="margin-top:2%;">
-                    <a href="edit_profil">
+                    <a href="{{route('user.edit',Auth::user()->id)}}">
                         <img src="{{asset('img/edit.png')}}" alt="edit" style="width: 30%;">
                     </a>
                 </div>

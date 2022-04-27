@@ -22,6 +22,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .custom-form{
+            width: 80%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        border-bottom: 2px solid black;
+                        box-sizing: border-box;
+                        font-size : 22px;
+        }
+    </style>
 </head>
 <body style="background-color:rgba(239, 239, 239, 1);
 ">
@@ -39,10 +50,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard" style="font-size: 250%">{{ __('Beranda') }}</a>
+                            <a class="nav-link" href="{{route('home')}}" style="font-size: 250%">{{ __('Beranda') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Kategori') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Cari Lomba') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="font-size: 250%">{{ __('Tim') }}</a>
@@ -75,7 +86,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('user.show',Auth::user()->id) }}">
+                                    <a class="dropdown-item" href="{{ route('user.show') }}">
                                         {{ __('Profil') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

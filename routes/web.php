@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LombaController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,14 +16,20 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  [App\Http\Controllers\HomeController::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
+
+//LOMBA ROUTE
+Route::get('/lomba/create',[LombaController::class, 'create'])->name('lomba.create');
+Route::post('/lomba',[LombaController::class, 'store'])->name('lomba.store');
+Route::get('/lomba/{lomba}',[LombaController::class, 'show'])->name('lomba.show');
+
+Route::get('/user/{user}',[UserController::class, 'show'])->name('user.show');
+
 Route::get('/dashboard', function() {
     return view('dashboard');
 });

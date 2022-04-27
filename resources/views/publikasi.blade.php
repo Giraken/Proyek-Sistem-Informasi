@@ -8,12 +8,12 @@
         </div>
 
         <div style="border-radius: 5px;">
-            <form action="/#">
+            <form action="{{route('lomba.store')}}" method="post" enctype="multipart/form-data">@csrf
                 <div>
                     <label for="judul">Judul Lomba</label>
                 </div>
                 <div>
-                    <input type="text" id="judul" name="judul_lomba" placeholder="Masukkan judul lomba.."
+                    <input type="text" id="judul" name="judul" placeholder="Masukkan judul lomba.."
                     style="
                         width: 50%;
                         padding: 12px 20px;
@@ -25,10 +25,10 @@
                 </div>
 
                 <div>
-                    <label for="country">Kategori</label>
+                    <label for="kategori">Kategori</label>
                 </div>
                 <div>
-                    <select id="country" name="country"
+                    <select id="kategori" name="kategori"
                     style="
                         width: 50%;
                         padding: 12px 20px;
@@ -45,10 +45,10 @@
                 </div>
 
                 <div>
-                    <label for="country">Bidang</label>
+                    <label for="bidang">Bidang</label>
                 </div>
                 <div>
-                    <select id="country" name="country"
+                    <select id="bidang" name="bidang"
                     style="
                         width: 50%;
                         padding: 12px 20px;
@@ -69,10 +69,10 @@
                 </div>
 
                 <div>
-                    <label for="country">Tingkat</label>
+                    <label for="tingkat">Tingkat</label>
                 </div>
                 <div>
-                    <select id="country" name="country"
+                    <select id="tingkat" name="tingkat"
                     style="
                         width: 50%;
                         padding: 12px 20px;
@@ -91,18 +91,18 @@
                 </div>
 
                 <div>
-                    <label for="country">Jenis</label>
+                    <label for="jenis">Jenis</label>
                 </div>
                 <div>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <input type="radio" id="html" name="jenis" value="HTML">
                     <label for="individu">Individu</label>
 
-                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <input type="radio" id="css" name="jenis" value="CSS">
                     <label for="tim">Tim</label>
                 </div>
 
                 <div>
-                    <label for="country">Persyaratan & Deskripsi Lain</label>
+                    <label for="deskripsi">Persyaratan & Deskripsi Lain</label>
                 </div>
                 <div>
                     <textarea style="
@@ -115,14 +115,14 @@
                         background-color: #f8f8f8;
                         font-size: 16px;
                         resize: none;
-                    ">Masukkan Deskripsi Lainnya</textarea>
+                    " name="deskripsi">Masukkan Deskripsi Lainnya</textarea>
                 </div>
 
                 <div>
-                    <label for="country">Upload Poster</label>
+                    <label for="poster">Upload Poster</label>
                 </div>
                 <div>
-                    <input type="file" class="form-control-file" id="berkas" name="berkas" placeholder="Upload Poster(JPEG,JPG,PNG)">
+                    <input type="file" class="form-control-file" id="poster" name="poster" placeholder="Upload Poster(JPEG,JPG,PNG)">
                 </div>
 
 

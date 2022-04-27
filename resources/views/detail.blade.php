@@ -4,11 +4,11 @@
     <div class="container" style="margin-bottom: 10%">
         <div class="container text-center" style="margin-top:2%;box-shadow: 0 3px 20px rgba(0, 0, 0, .5); border-radius: 10px; background-color: white; padding: 15px; position: relative;">
             <div class="Judul">
-                <h1 style="font-family: 'Montserrat';color: #5594BE;">Judul Lomba</h1>
+                <h1 style="font-family: 'Montserrat';color: #5594BE;">{{$lomba->lomba_judul}}</h1>
             </div>
             <div class="row" style="margin-top: 3%">
                 <div class="col-5">
-                    <img src="img/3.png" alt="poster" style="width: 90%;height:90%">
+                    <img src="{{asset($lomba->lomba_foto)}}" alt="poster" style="width: 90%;height:90%">
                 </div>
                 <div class="col-6">
                     <div class="row">
@@ -23,14 +23,13 @@
                     </div>
                     <div class="tab-content">
                         <div id="Deskripsi" class="tab-pane active"> <br>
-                            <div class="container">
+                            <div class="container" style="min-height: 100px">
                                 <p  style="text-align: justify; font-family: 'Montserrat';color: #5C5C5C;font-size:20px">
-                                    It is a long established fact that a reader will be distracted by the readable content of a page when
-                                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                                    of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-                                    desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-                                    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-                                    over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                    @if ($lomba->lomba_deskripsi != null)
+                                        {{$lomba->lomba_deskripsi}}
+                                    @else
+                                        -Deskripsi Kosong-
+                                    @endif
                                 </p>
                             </div>
                         </div>
@@ -43,18 +42,18 @@
                         </div>
                         <div>
                             <p style="font-size: 20px">
-                                <b>Kategori :</b> Isi   <b>Bidang :</b> Isi     <b>Tingkat :</b> Isi
+                                <b>Kategori :</b> {{$lomba->lomba_kategori}}   <b>Bidang :</b> {{$lomba->lomba_bidang}}     <b>Tingkat :</b> {{$lomba->lomba_tingkat}}
                             </p>
                         </div>
                     </div>
                     <div style="margin-left: 90%">
                         <a href="cari_tim">
-                            <img src="img/Cari.png" alt="cari tim">
+                            <img src="{{asset("img/Cari Tim.png")}}" alt="cari tim">
                         </a>
                     </div>
                     <div style="margin-top: 5%;margin-left:78.5%">
                         <a href="">
-                            <img src="img/Daftar Lomba.png" alt="daftar lomba">
+                            <img src="{{asset("img/Daftar Lomba.png")}}" alt="daftar lomba">
                         </a>
                     </div>
                 </div>

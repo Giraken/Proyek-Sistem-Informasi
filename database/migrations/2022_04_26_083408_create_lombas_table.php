@@ -21,7 +21,7 @@ class CreateLombasTable extends Migration
             $table->string("lomba_bidang");
             $table->string("lomba_tingkat");
             $table->string("lomba_jenis");
-            $table->string("lomba_deskripsi")->nullable(true);
+            $table->text("lomba_deskripsi")->nullable(true)->default(null);
             $table->string("lomba_foto");
             $table->timestamps();
         });

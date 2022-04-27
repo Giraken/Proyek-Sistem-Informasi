@@ -66,6 +66,11 @@ class LombaController extends Controller
         return redirect()->route('lomba.show', $lomba->id)->with('pesan', "Lomba berhasil dipublikasi");
     }
 
+    public function search(){
+        $lombas = Lomba::all();
+        return view('cari_lomba')->with('lombas',$lombas);
+    }
+
     /**
      * Display the specified resource.
      *

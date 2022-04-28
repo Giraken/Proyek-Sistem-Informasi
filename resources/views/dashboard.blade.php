@@ -13,7 +13,7 @@
                 <img src="img/Publikasi.png" alt="Publikasi">
             </a>
             <a class="col-4" href="#">
-                <img src="img/Kategori.png" alt="Kategori">
+                <img src="img/Cari Lomba.png" alt="Cari Lomba">
             </a>
         </div>
 

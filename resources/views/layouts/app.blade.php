@@ -50,16 +50,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('home')}}" style="font-size: 250%">{{ __('Beranda') }}</a>
+                            <a class="nav-link" href="{{route('home')}}" style="font-size: 200%">{{ __('Beranda') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Cari Lomba') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 200%">{{ __('Cari Lomba') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Tim') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 200%">{{ __('Cari Tim') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Bantuan') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 200%">{{ __('Bantuan') }}</a>
                         </li>
                     </ul>
 

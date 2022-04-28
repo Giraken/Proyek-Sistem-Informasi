@@ -84,7 +84,13 @@
                                 <label for="email" class="text-md-right" style="margin-left: 30%">Email</label>
 
                                 <div class="col-md-6" style="margin-left: 28%">
-                                    <input style="" id="email" type="email" placeholder="Masukkan email.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" placeholder="Masukkan email.." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+                                    style="
+                                        border: none;
+                                        border-bottom: 2px solid black;
+                                        box-sizing: border-box;
+                                        border-radius: 0px;
+                                    ">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -98,7 +104,13 @@
                                 <label for="password" class="text-md-right" style="margin-left: 30%">Password</label>
 
                                 <div class="col-md-6" style="margin-left: 28%">
-                                    <input id="password" type="password" placeholder="Masukkan kata.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    <input id="password" type="password" placeholder="Masukkan kata.." class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"
+                                    style="
+                                        border: none;
+                                        border-bottom: 2px solid black;
+                                        box-sizing: border-box;
+                                        border-radius: 0px;
+                                    ">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">

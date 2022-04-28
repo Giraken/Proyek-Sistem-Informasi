@@ -48,7 +48,7 @@
                     </div>
                     <div style="margin-left: 90%">
                         <a href="cari_tim">
-                            <img src="{{asset("img/Cari Tim.png")}}" alt="cari tim">
+                            <img src="{{asset("img/Cari.png")}}" alt="cari tim">
                         </a>
                     </div>
                     <div style="margin-top: 5%;margin-left:78.5%">

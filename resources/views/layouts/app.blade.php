@@ -53,10 +53,10 @@
                             <a class="nav-link" href="{{route('home')}}" style="font-size: 200%">{{ __('Beranda') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 200%">{{ __('Cari Lomba') }}</a>
+                            <a class="nav-link" href="lomba/search" style="font-size: 200%">{{ __('Cari Lomba') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 200%">{{ __('Cari Tim') }}</a>
+                            <a class="nav-link" href="cari_tim" style="font-size: 200%">{{ __('Cari Tim') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="font-size: 200%">{{ __('Bantuan') }}</a>

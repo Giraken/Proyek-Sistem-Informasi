@@ -15,162 +15,186 @@
                                     border: 1px solid #ccc;
                                     border-radius: 4px;
                                     box-sizing: border-box;
-                                "><option value=""
-                                    style="
-                                    font-family: 'Montserrat';
-                                    font-style: normal;
-                                    font-weight: 700;
-                                    font-size: 24px;
-                                    line-height: 29px;
-                                    display: flex;
-                                    align-items: center;
-                                    color: grey;
-                                    "> -- Semua Kategori --
+                                ">
+
+                                    <option value=""
+                                        style="
+                                        font-family: 'Montserrat';
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        font-size: 24px;
+                                        line-height: 29px;
+                                        display: flex;
+                                        align-items: center;
+                                        color: grey;
+                                        "> -- Semua Kategori --
                                     </option>
+
                                     <option value="Olimpiade"
-                                    style="
-                                    font-family: 'Montserrat';
-                                    font-style: normal;
-                                    font-weight: 700;
-                                    font-size: 24px;
-                                    line-height: 29px;
-                                    display: flex;
-                                    align-items: center;
-                                    color: rgba(185, 0, 0, 0.66);
-                                    "> Olimpiade
+                                        style="
+                                        font-family: 'Montserrat';
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        font-size: 24px;
+                                        line-height: 29px;
+                                        display: flex;
+                                        align-items: center;
+                                        color: rgba(185, 0, 0, 0.66);
+                                        "> Olimpiade
                                     </option>
+
                                     <option value="Karya Tulis"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #26E12D;
-                                    ">Karya Tulis</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #26E12D;
+                                        ">Karya Tulis
+                                    </option>
+
                                     <option value="Lainnya"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #93644A;
-                                    ">Lainnya</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #93644A;
+                                        ">Lainnya
+                                    </option>
                                 </select>
                             </div>
 
                             <div class="col-3">
-                                <select name="bidang_lomba"
-                                style="
+                                <select name="bidang_lomba" style="
                                     width: 80%;
                                     padding: 10px 20px;
                                     display: inline-block;
                                     border: 1px solid #ccc;
                                     border-radius: 4px;
                                     box-sizing: border-box;
-                                "><option value=""
+                                ">
+
+                                    <option value=""
                                     style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: grey;
-                                    ">-- Semua Bidang --</option>
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: grey;
+                                        ">-- Semua Bidang --
+                                    </option>
+
                                     <option value="Komputer"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #26E12D;
-                                    ">Komputer</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #26E12D;
+                                        ">Komputer
+                                        </option>
+
                                     <option value="IPA"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #0066FF;"
-                                    >IPA</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #0066FF;"
+                                        >IPA
+                                    </option>
+
                                     <option value="IPS"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #93644A;"
-                                    >IPS</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #93644A;"
+                                        >IPS
+                                    </option>
+
                                     <option value="Seni"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #26E12D;"
-                                    >Seni</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #26E12D;"
+                                        >Seni
+                                    </option>
+
                                     <option value="Olahraga"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #0066FF;"
-                                    >Olahraga</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #0066FF;"
+                                        >Olahraga
+                                    </option>
+
                                     <option value="Agama"
                                     style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #93644A;"
-                                    >Agama</option>
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #93644A;"
+                                        >Agama
+                                    </option>
+
                                     <option value="Lainnya"
                                     style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #0066FF;"
-                                    >Lainnya</option>
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #0066FF;"
+                                        >Lainnya
+                                    </option>
+
                                 </select>
                             </div>
 
@@ -185,78 +209,90 @@
                                     border-radius: 4px;
                                     box-sizing: border-box;
                                 ">
-                                <option value=""
-                                style="
-                                font-family: 'Nunito Sans';
-                                font-style: normal;
-                                font-weight: 800;
-                                font-size: 24px;
-                                line-height: 33px;
-                                display: flex;
-                                align-items: center;
-                                letter-spacing: 0.02em;
-                                color: grey;"
-                                >-- Semua Tingkat --</option>
+
+                                    <option value=""
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: grey;"
+                                        >-- Semua Tingkat --
+                                    </option>
+
                                     <option value="Kuliah"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #0066FF;"
-                                    >Kuliah</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #0066FF;"
+                                        >Kuliah
+                                    </option>
+
                                     <option value="SD"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #93644A;"
-                                    >SD</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #93644A;"
+                                        >SD
+                                    </option>
+
                                     <option value="SMP"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #26E12D;"
-                                    >SMP</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #26E12D;"
+                                        >SMP
+                                    </option>
+
                                     <option value="SMA"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #0066FF;"
-                                    >SMA</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #0066FF;"
+                                        >SMA
+                                    </option>
+
                                     <option value="Umum"
-                                    style="
-                                    font-family: 'Nunito Sans';
-                                    font-style: normal;
-                                    font-weight: 800;
-                                    font-size: 24px;
-                                    line-height: 33px;
-                                    display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: #93644A;"
-                                    >Umum</option>
+                                        style="
+                                        font-family: 'Nunito Sans';
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 24px;
+                                        line-height: 33px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: #93644A;"
+                                        >Umum
+                                    </option>
                                 </select>
                             </div>
 

@@ -54,3 +54,7 @@ Route::get('/publikasi', function() {
 Route::get('/cari_lomba', function() {
     return view('cari_lomba');
 });
+
+Route::get('/detail_cari_tim', function() {
+    return view('detail_cari_tim');
+});

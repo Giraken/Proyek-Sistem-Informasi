@@ -12,7 +12,7 @@
             <a class="col-4" href="publikasi">
                 <img src="img/Publikasi.png" alt="Publikasi">
             </a>
-            <a class="col-4" href="#">
+            <a class="col-4" href="lomba/search">
                 <img src="img/Cari Lomba.png" alt="Cari Lomba">
             </a>
         </div>

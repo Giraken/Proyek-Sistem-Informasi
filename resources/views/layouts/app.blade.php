@@ -22,6 +22,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .custom-form{
+            width: 80%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        border-bottom: 2px solid black;
+                        box-sizing: border-box;
+                        font-size : 22px;
+        }
+    </style>
 </head>
 <body style="background-color:rgba(239, 239, 239, 1);
 ">
@@ -29,7 +40,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-item" href="{{ url('/') }}">
-                    <img src="img/SIMBA.png" alt="SIMBA" style="width: 75%;height:75%">
+                    <img src="{{asset("img/SIMBA.png")}}" alt="SIMBA" style="width: 75%;height:75%">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -39,10 +50,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard" style="font-size: 250%">{{ __('Beranda') }}</a>
+                            <a class="nav-link" href="{{route('home')}}" style="font-size: 250%">{{ __('Beranda') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Kategori') }}</a>
+                            <a class="nav-link" href="#" style="font-size: 250%">{{ __('Cari Lomba') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="font-size: 250%">{{ __('Tim') }}</a>
@@ -59,22 +70,25 @@
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">
-                                        <img src="img/Daftar.png" alt="Daftar">
+                                        <img src="{{asset("img/Daftar.png")}}" alt="Daftar">
                                     </a>
                                 </li>
                             @endif
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">
-                                    <img src="img/Masuk.png" alt="Masuk">
+                                    <img src="{{asset("img/Masuk.png")}}" alt="Masuk">
                                 </a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->user_name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('user.show') }}">
+                                        {{ __('Profil') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

@@ -58,3 +58,7 @@ Route::get('/cari_lomba', function() {
 Route::get('/detail_cari_tim', function() {
     return view('detail_cari_tim');
 });
+
+Route::get('/buat_tim', function() {
+    return view('buat_tim');
+});

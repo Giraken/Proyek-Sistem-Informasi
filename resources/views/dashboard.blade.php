@@ -21,21 +21,15 @@
             <img src="img/Terpopuler.png" alt="Terpopuler" style="margin-top:5% ">
         </div>
 
-        <div class="row" style="margin-top: 3%">
-            <div class="col-3">
-                <a href="detail_lomba">
-                    <img src="img/3.png" alt="coba">
+        <div class="row justify-content-center" style="margin-top: 3%">
+            @foreach ($lombas as $lomba)
+            <div class="col-3 mx-3 my-5 bg-white text-center rounded shadow">
+                <a href="{{route('lomba.show',$lomba->id)}}">
+                    <img src="{{asset($lomba->lomba_foto)}}" alt="coba" class="w-100 my-2">
                 </a>
+                <a href="{{route('lomba.show',$lomba->id)}}" class="fw-bold">{{$lomba->lomba_judul}}</a>
             </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
-            <div class="col-3">
-                <img src="img/3.png" alt="coba">
-            </div>
+            @endforeach
         </div>
 
         <div>

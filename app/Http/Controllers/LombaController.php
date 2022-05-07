@@ -68,7 +68,30 @@ class LombaController extends Controller
 
     public function search(){
         $lombas = Lomba::all();
-        return view('cari_lomba')->with('lombas',$lombas);
+        $data['kategori']=null;
+        $data['bidang']=null;
+        $data['tingkat']=null;
+        return view('cari_lomba')->with('lombas',$lombas)->with('data',$data);
+    }
+
+    public function filter(Request $request){
+        if($request['kategori']!="")
+            $kategori = Lomba::where("lomba_kategori","=",$request["kategori"])->get();
+        else
+            $kategori = Lomba::all();
+        if($request['bidang']!="")
+            $bidang = Lomba::where("lomba_bidang","=",$request["bidang"])->get();
+        else
+            $bidang = Lomba::all();
+        if($request['tingkat']!="")
+            $tingkat = Lomba::where("lomba_tingkat","=",$request["tingkat"])->get();
+        else
+            $tingkat = Lomba::all();
+
+        $lombas = $kategori->intersect($bidang);
+        $lombas = $lombas->intersect($tingkat);
+
+        return view('cari_lomba')->with('lombas',$lombas)->with('data',$request);
     }
 
     /**

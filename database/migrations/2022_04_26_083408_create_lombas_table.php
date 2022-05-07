@@ -23,6 +23,7 @@ class CreateLombasTable extends Migration
             $table->string("lomba_jenis");
             $table->text("lomba_deskripsi")->nullable(true)->default(null);
             $table->string("lomba_foto");
+            $table->bigInteger("views")->default(0);
             $table->timestamps();
         });
     }

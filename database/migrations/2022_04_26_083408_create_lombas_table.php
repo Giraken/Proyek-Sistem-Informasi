@@ -16,7 +16,7 @@ class CreateLombasTable extends Migration
         Schema::create('lombas', function (Blueprint $table) {
             $table->id();
             $table->bigInteger("user_id");
-            $table->string("lomba_judul");
+            $table->string("lomba_judul")->unique();
             $table->string("lomba_kategori");
             $table->string("lomba_bidang");
             $table->string("lomba_tingkat");

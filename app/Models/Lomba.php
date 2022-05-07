@@ -18,4 +18,13 @@ class Lomba extends Model
         "lomba_deskripsi",
         "lomba_foto",
     ];
+
+    public function tims(){
+        return $this->hasMany(Tim::class,"lomba_id");
+    }
+    public static function findTims($judul){
+        $lomba = Lomba::firstWhere("lomba_judul", $judul);
+        if($lomba != null) return $lomba->tims;
+        else return array();
+    }
 }

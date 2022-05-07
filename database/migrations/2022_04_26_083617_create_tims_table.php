@@ -18,7 +18,7 @@ class CreateTimsTable extends Migration
             $table->bigInteger("lomba_id");
             $table->string("tim_nama");
             $table->integer("tim_jumlah");
-            $table->string("tim_anggota");
+            $table->text("tim_deskripsi")->default(null);
             $table->timestamps();
         });
     }

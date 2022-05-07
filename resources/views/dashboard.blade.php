@@ -6,13 +6,13 @@
         <img src="img/2.png" alt="SIMBA" style="width: 45%; height:45%">
 
         <div class="row" style="margin-top: 5%">
-            <a class="col-4" href="cari_tim">
+            <a class="col-4" href="{{route("tim.search")}}">
                 <img src="img/Cari Tim.png" alt="Cari Tim">
             </a>
-            <a class="col-4" href="publikasi">
+            <a class="col-4" href="{{route("lomba.create")}}">
                 <img src="img/Publikasi.png" alt="Publikasi">
             </a>
-            <a class="col-4" href="lomba/search">
+            <a class="col-4" href="{{route("lomba.search")}}">
                 <img src="img/Cari Lomba.png" alt="Cari Lomba">
             </a>
         </div>

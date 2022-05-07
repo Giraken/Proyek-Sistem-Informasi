@@ -12,7 +12,7 @@
                     <label for="judul">Judul Lomba</label>
                 </div>
                 <div>
-                    <input type="text" id="judul" name="judul" placeholder="Masukkan judul lomba.."
+                    <input type="text" id="judul" name="lomba_judul" placeholder="Masukkan judul lomba.."
                     style="
                         width: 50%;
                         padding: 12px 20px;
@@ -27,7 +27,7 @@
                     <label for="nama_tim">Nama Tim</label>
                 </div>
                 <div>
-                    <input type="text" id="nama_tim" name="nama_tim" placeholder="Masukkan nama tim.."
+                    <input type="text" id="nama_tim" name="tim_nama" placeholder="Masukkan nama tim.."
                     style="
                         width: 50%;
                         padding: 12px 20px;
@@ -42,7 +42,7 @@
                     <label for="jumlah_anggota_tim">Jumlah Anggota Tim</label>
                 </div>
                 <div>
-                    <select id="jumlah_anggota_tim" name="jumlah_anggota_tim"
+                    <select id="jumlah_anggota_tim" name="tim_jumlah"
                     style="
                         width: 50%;
                         padding: 12px 20px;
@@ -61,73 +61,6 @@
                 </div>
 
                 <div>
-                    <label for="kategori">Kategori</label>
-                </div>
-                <div>
-                    <select id="kategori" name="kategori"
-                    style="
-                        width: 50%;
-                        padding: 12px 20px;
-                        margin: 8px 0;
-                        display: inline-block;
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        box-sizing: border-box;
-                    ">
-                        <option value="Olimpiade">Olimpiade</option>
-                        <option value="Karya Tulis">Karya Tulis</option>
-                        <option value="Lainnya">Lainnya</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="bidang">Bidang</label>
-                </div>
-                <div>
-                    <select id="bidang" name="bidang"
-                    style="
-                        width: 50%;
-                        padding: 12px 20px;
-                        margin: 8px 0;
-                        display: inline-block;
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        box-sizing: border-box;
-                    ">
-                        <option value="Komputer">Komputer</option>
-                        <option value="IPA">IPA</option>
-                        <option value="IPS">IPS</option>
-                        <option value="Seni">Seni</option>
-                        <option value="Olahraga">Olahraga</option>
-                        <option value="Agama">Agama</option>
-                        <option value="Lainnya">Lainnya</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="tingkat">Tingkat</label>
-                </div>
-                <div>
-                    <select id="tingkat" name="tingkat"
-                    style="
-                        width: 50%;
-                        padding: 12px 20px;
-                        margin: 8px 0;
-                        display: inline-block;
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        box-sizing: border-box;
-                    ">
-                        <option value="SD">SD</option>
-                        <option value="SMP">SMP</option>
-                        <option value="SMA">SMA</option>
-                        <option value="Kuliah">Kuliah</option>
-                        <option value="Umum">Umum</option>
-                    </select>
-                </div>
-
-
-                <div>
                     <label for="deskripsi_tim">Deskripsi Tim</label>
                 </div>
                 <div>
@@ -141,7 +74,7 @@
                         background-color: #f8f8f8;
                         font-size: 16px;
                         resize: none;
-                    " name="deskripsi">Masukkan Deskripsi Anggota Tim Yang Dibutuhkan...</textarea>
+                    " name="tim_deskripsi">Masukkan Deskripsi Anggota Tim Yang Dibutuhkan...</textarea>
                 </div>
 
 

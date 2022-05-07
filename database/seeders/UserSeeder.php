@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
                 'user_kelas' => rand(0,3),
                 'user_domisili' => $faker->city,
                 'user_telp' => $faker->phoneNumber,
-                'user_foto'=> null,
+                'user_foto'=> asset("img/profil.jpg"),
                 'user_role' => "1",
             ]);
         }

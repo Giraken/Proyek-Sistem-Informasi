@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LombaController;
+use App\Http\Controllers\TimController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,14 @@ Route::get('/lomba/{lomba}',[LombaController::class, 'show'])->name('lomba.show'
 
 Route::get('/user/{user}/edit',[UserController::class, 'edit'])->name('user.edit');
 Route::post('/user/{user}',[UserController::class, 'update'])->name('user.update');
-Route::get('/user/',[UserController::class, 'show'])->name('user.show')->middleware('auth');
+Route::get('/user/{user}',[UserController::class, 'show'])->name('user.show')->middleware('auth');
+
+Route::get('/tim/create', [TimController::class,"create"])->name('tim.create');
+Route::post('/tim', [TimController::class,"store"])->name('tim.store');
+Route::get('/tim/search/', [TimController::class,"search"])->name('tim.search');
+Route::get('/tim/search/{judul}', [TimController::class,"searchValue"])->name('tim.search.value');
+Route::post('/tim/search/', [TimController::class,"find"])->name('tim.find');
+Route::get('/tim/{tim}', [TimController::class,"show"])->name('tim.show');
 
 Route::get('/dashboard', function() {
     return view('dashboard');

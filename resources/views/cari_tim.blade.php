@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <form action="/#">
+    <form action="{{route("tim.find")}}" method="POST"> @csrf
         <div class="row" style="margin-left: 30%;">
             <div class="col-xl-auto">
                 <div class="container"
@@ -13,11 +13,11 @@
                     " >
                     <div class="">
                         <a href="">
-                            <img src="img/Search.svg" alt=""
+                            <img src="{{asset('img/Search.svg')}}" alt=""
                             style="
                             ">
                         </a>
-                        <input type="text" id="cari_tim" name="cari_tim" placeholder="Cari Nama Lomba"
+                        <input type="text" id="cari_tim" name="lomba_judul" placeholder="Cari Nama Lomba"
                         style="
                             padding: 12px 20px;
                             margin: 8px 0;
@@ -39,7 +39,7 @@
             </div>
         </div>
     </form>
-
+@forelse ($tims as $tim)
     <div class="row" style="margin-top:3%;">
         <div class="col-12" style="border-radius:20px;background: #FFFFFF;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); margin-left:;padding-bottom:3%">
             <div class="col-11" style="
@@ -49,111 +49,33 @@
                 margin-top:2%;margin-left:5%;
                 font-family: 'Montserrat';">
                 <p style="text-align:center;padding-top:2%">
-                    JUDUL LOMBA
+                    {{$tim->lomba->lomba_judul}}
                 </p>
                 <div class="row">
                     <div class="col-8">
-                        <p style="font-size: 150%">NAMA TIM</p>
+                        <a href="{{route("tim.show",$tim->id)}}" style="font-size: 150%">{{$tim->tim_nama}}</a>
                         <div class="row">
                             <div class="col-2">
-                                <p>KATEGORI</p>
+                                <p>{{$tim->lomba->lomba_kategori}}</p>
                             </div>
                             <div class="col-2">
-                                <p>BIDANG</p>
+                                <p>{{$tim->lomba->lomba_bidang}}</p>
                             </div>
                             <div class="col-2">
-                                <p>TINGKAT</p>
+                                <p>{{$tim->lomba->lomba_tingkat}}</p>
                             </div>
                             <div class="col-12">
-                                <p>DESKRIPSI</p>
+                                <p>{{$tim->tim_deskripsi}}</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-1" style="margin-top: 2%;margin-left:8%">
-                        <h1 style="color: #5594BE;">2/3</h1>
+                        <h1 style="color: #5594BE;">{{$tim->users->count()}}/{{$tim->tim_jumlah}}</h1>
                     </div>
 
                     <div class="col-2">
-                        <img src="img/profil.jpg" alt="Cari Tim" style="width: 50%;">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-11" style="
-                border-radius:20px;
-                background: #FFFFFF;
-                box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-                margin-top:2%;margin-left:5%;
-                font-family: 'Montserrat';">
-                <p style="text-align:center;padding-top:2%">
-                    GEMASTIK XVII
-                </p>
-                <div class="row">
-                    <div class="col-8">
-                        <p style="font-size: 150%">DoaIbu</p>
-                        <div class="row">
-                            <div class="col-2">
-                                <p>Lainnya</p>
-                            </div>
-                            <div class="col-2">
-                                <p>Komputer</p>
-                            </div>
-                            <div class="col-2">
-                                <p>Kuliah</p>
-                            </div>
-                            <div class="col-12">
-                                <p>Dibutuhkan Programmer yang bisa bahasa..</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-1" style="margin-top: 2%;margin-left:8%">
-                        <h1 style="color: #5594BE;">2/3</h1>
-                    </div>
-
-                    <div class="col-2">
-                        <img src="img/profil.jpg" alt="Cari Tim" style="width: 50%;">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-11" style="
-                border-radius:20px;
-                background: #FFFFFF;
-                box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-                margin-top:2%;margin-left:5%;
-                font-family: 'Montserrat';">
-                <p style="text-align:center;padding-top:2%">
-                    GEMASTIK XVII
-                </p>
-                <div class="row">
-                    <div class="col-8">
-                        <p style="font-size: 150%">DoaIbu</p>
-                        <div class="row">
-                            <div class="col-2">
-                                <p>Lainnya</p>
-                            </div>
-                            <div class="col-2">
-                                <p>Komputer</p>
-                            </div>
-                            <div class="col-2">
-                                <p>Kuliah</p>
-                            </div>
-                            <div class="col-12">
-                                <p>Dibutuhkan Programmer yang bisa bahasa..</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-1" style="margin-top: 2%;margin-left:8%">
-                        <h1 style="color: #5594BE;">2/3</h1>
-                    </div>
-
-                    <div class="col-2">
-                        <img src="img/profil.jpg" alt="Cari Tim" style="width: 50%;">
+                        <img src="{{asset("img/profil.jpg")}}" alt="Cari Tim" style="width: 50%;">
                     </div>
 
                 </div>
@@ -161,5 +83,22 @@
 
         </div>
     </div>
+@empty
+<div class="row" style="margin-top:3%;">
+        <div class="col-12" style="border-radius:20px;background: #FFFFFF;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); margin-left:;padding-bottom:3%">
+            <div class="col-11" style="
+                border-radius:20px;
+                background: #FFFFFF;
+                box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-top:2%;margin-left:5%;
+                font-family: 'Montserrat';">
+                <p style="text-align:center" class="my-5 p-5">
+                    Maaf, tim tidak ditemukan
+                </p>
+            </div>
+
+        </div>
+    </div>
+@endforelse
 </div>
 @endsection

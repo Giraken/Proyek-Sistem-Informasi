@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
             $ind = rand(0,3);
             DB::table('users')->insert([
                 'user_name' => $nama,
-                'email' => Str::snake($nama.rand(0, 1000)).'@gmail.com',
+                'email' => Str::replace(" ", "",Str::lower($nama).rand(0, 1000)).'@gmail.com',
                 'password' => Hash::make("12345678"),
                 'user_instansi' => $faker->firstNameMale." University",
                 'user_jurusan' => $ind > 1 ? $jurusan421[$ind-2][$ind == 2 ? rand(0,3):rand(0,20)]:null,

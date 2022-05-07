@@ -48,9 +48,11 @@
                 box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
                 margin-top:2%;margin-left:5%;
                 font-family: 'Montserrat';">
-                <p style="text-align:center;padding-top:2%">
-                    {{$tim->lomba->lomba_judul}}
-                </p>
+                <div class="text-center my-3">
+                    <a style="text-align:center;" class="" href="{{route("lomba.show",$tim->lomba->id)}}">
+                        {{$tim->lomba->lomba_judul}}
+                    </a>
+                </div>
                 <div class="row">
                     <div class="col-8">
                         <a href="{{route("tim.show",$tim->id)}}" style="font-size: 150%">{{$tim->tim_nama}}</a>

@@ -20,7 +20,7 @@ class TimSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create("id_ID");
-        for($i=0; $i < 20; $i++) {
+        for($i=0; $i < 50; $i++) {
             $jumlah = rand(2,5);
             $isi = rand(1,$jumlah);
             $id = DB::table('tims')->insertGetId([

@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div style="margin-left: 90%">
-                        <a href="{{route("tim.search.value",$lomba->id)}}">
+                        <a href="{{route("tim.search.value",$lomba->lomba_judul)}}">
                             <img src="{{asset("img/Cari.png")}}" alt="cari tim">
                         </a>
                     </div>
